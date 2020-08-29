@@ -1,5 +1,8 @@
 [package]
 name = "where_is"
+description = "A crate to help find files"
+repository = "https://github.com/smklein/where_is"
+license = "MIT"
 version = "0.1.0"
 authors = ["Sean Klein <seanmarionklein@gmail.com>"]
 edition = "2018"
