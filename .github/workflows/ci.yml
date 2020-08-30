@@ -36,6 +36,15 @@ jobs:
     - run: cargo build --verbose
     - run: cargo doc --verbose
     - run: cargo test --verbose
+  clippy_check:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - run: rustup component add clippy
+      - uses: actions-rs/clippy-check@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: --all-features
   rustfmt:
     name: rustfmt
     runs-on: ubuntu-18.04
