@@ -30,6 +30,7 @@ pub struct Finder {
 impl Finder {
     /// Constructs a new `Finder` object, which walks the directory tree
     /// from `root`, looking for a file which matches `target`.
+    // TODO(smklein): Regex, instead of target?
     pub fn new<P: AsRef<Path>>(root: P, target: &str) -> Self {
         Finder {
             walker: WalkDir::new(root),
